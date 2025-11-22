@@ -46,7 +46,7 @@ class FirebaseService:
 
     def save_subject_news(self, date_str: str, subject_slug: str, data: Dict[str, Any]):
         try:
-            doc_ref = self.db.collection("daily_news").document(date_str).collection("subjects").document(subject_slug)
+            doc_ref = self.db.collection("news").document(date_str).collection("subjects").document(subject_slug)
             doc_ref.set(data)
             logging.info(f"✅ Saved {subject_slug} to Firestore.")
         except Exception as e:
