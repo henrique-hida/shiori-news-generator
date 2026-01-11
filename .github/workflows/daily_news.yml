@@ -20,7 +20,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install google-generativeai firebase-admin
+        pip install google-generativeai firebase-admin ddgs python-dotenv certifi
 
     - name: Run News Generator
       env:
